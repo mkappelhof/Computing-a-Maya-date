@@ -1,0 +1,443 @@
+#Computing a Maya date
+
+<p id="intro">The following report describes my search for the appropriate method to convert a date (my sons birthday) on the Gregorian calendar to its Mayan equivalent.</p>
+
+##Table of Content
+1. Introduction
+2. Calendrical systems
+3. Notation
+4. Results
+5. References
+
+##Introduction
+Contrary to our calendar-system, which is really tied to the length of the solar year, the Mayan calendar was twofold: counting days linear from a (mythological) zero point (August 11 3114 BC, denoted as 13.0.0.0.0) onwards in the **Long Count**, and cyclical with the **Calendar Round**: comprised of the 260 days counting **Tzolk'in** (sacred)- and the 365 days counting **Haab'** (secular) calendar (Kettunen & Helmke, 2010). 
+
+##Calendrical systems
+The **Julian calender** originated as a Roman calendar, which spread throughout most of the Christian world and was, in the course of the 16th to the 20th century, gradually substituted by the **Gregorian calendar**. (The latter is actually no more than a correction to the Julian calendar since the Julian calendar was, each year, a few minutes behind on the solar year). The Gregorian calendar became in effect on October 15, 1582. To cover dates before that day, the **Proleptic Gregorian calendar** is produced by extending the Gregorian calendar backwards to dates preceding its official introduction. 
+
+The Proleptic Gregorian Calendar, however, only renders identical dates with the Julian calendar between March 1, 200 AD and February 28, 300 AD. Traversing backwards from that period until 4713 BC, 38 leap-years are missing on the Proleptic Gregorian calendar which do appear on the Julian calendar. So a particular day on the Gregorian calendar in that early era is 28 days prior to that day in the Julian calendar. For example: Monday November 24, 4714 BC Proleptic Gregorian corresponds with January 1, 4714 BC Julian (Steel, 2001). 
+
+The ISO 8601 norm however, which applies to representations and formats of dates in the Gregorian (and potentially proleptic Gregorian) calendar, states the following:
+
+> Earlier dates, in the proleptic Gregorian calendar, may be used by mutual agreement of the partners exchanging information. The standard states that every date must be consecutive, so usage of the Julian calendar would be contrary to the standard (because at the switchover date, the dates would not be consecutive)
+
+So when the first steps were made to realign the Julian calendar to the solar year (in 46 BC, by making the year 445 days long) the Julian calendar became discontinuous, hence the Proleptic Gregorian calendar is used for dates before October 15, 1582 and the Gregorian calendar for dates after.
+
+###Tzolk'in
+The perpetuate Tzolk'in calendar combines twenty day names with thirteen day numbers to produce 260 unique days. It is used to determine the time of religious and ceremonial events and for divination. The 260-day cycle was the most important measure of time among all Mesoamerican civilizations, for not only did it guide the daily rituals of the people but it also formed the basis for other measures of time of great astronomical and religious significance. For example, a double Tzolk'in (520 days) equates almost exactly with three eclipse half- years (519.93 days) and therefore provided a means for predicting solar eclipses (Malmström, 1973).
+
+Each successive day of the Tzolk'in calendar is numbered from 1 to 13 and then starting again at 1. Separately from this, every day is given a name in sequence from a list of 20 day names. So a typical count would be *1 Imix'*, *2 Ik'*, *3 Ak'b'al*, etc. up to *13 B'en* when the day numbers start back at one and the named-day sequence continues with *1 Ix*, *2 Men*, *3 K'ib'*, *4 Kab'an*, *5 Etz'nab'*, *6 Kawak*, and *7 Ajaw*. With now all the twenty named-days used, these begin to repeat the cycle while the number-sequence continues, like so: *8 Imix'*, *9 Ik'*, *10 Ak'b'al* etc (Kettunen & Helmke, 2010).
+
+####Table of the Tzolk'in count
+| Num | Name | Glyph | | Num | Name | Glyph | | Num | Name | Glyph | | Num | Name | Glyph |
+|-----|------|-------|-|-----|------|-------|-|-----|------|-------|-|-----|------|-------|
+| 1 | Imix' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D01-Imix.png =50x47) | | 6 | Kimi | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D06-Kimi.png =50x47) | | 11 | Chuwen | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D11-Chuwen.png =50x47) | | 16 | K'ib' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D16-Kib.png =50x47) |
+| 2 | Ik' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D02-Ik.png =50x47) | | 7 | Manik' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D07-Manik.png =50x47) | | 12 | Eb' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D12-Eb.png =50x47) | | 17 | Kab'an | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D17-Kaban.png =50x47) |
+| 3 | Ak'b'al | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D03-Akbal.png =50x47) | | 8 | Lamat | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D08-Lamat.png =50x47) | | 13 | B'en | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D13-Ben.png =50x47) | | 18 | Etz'nab' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D18-Etznab.png =50x47) |
+| 4 | K'an | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D04-Kan.png =50x47) | | 9 | *uluk | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D09-Muluk.png =50x47) | | 14 | Ix | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D14-Ix.png =50x47) | | 19 | Kawak | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D19-Kawak.png =50x47) |
+| 5 | Chikchan | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D05-Chikchan.png =50x47) | | 10 | Ok | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D10-Ok.png =50x47) | | 15 | Men | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D15-Men.png =50x47) | | 20 | Ajaw | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D20-Ajaw.png =50x47) |
+
+*Figure 1: Table of the Tzolk'in count*
+
+###Haab'
+The Haab' calendar is made up of eighteen named-months of twenty days each plus an additional month of five nameless days at the end of the year, known as *Wayeb'*. The Haab' doesn't take the extra quarter-day it takes the Earth to revolve around the sun in account, like we do with an intercalary day every four year in February. Although the Maya were very well aware their calendar wasn't synchrone to the solar year, they did not change it (Coe, 2011).
+
+Just like the Tzolk'in, each day name in the Haab' calendar is accompanied by a numeric coefficient, being the month number. Contrary to the Tzolk'in calendar the month numbers do not add up as cyclical as they do in the Tzolk'in. The Maya attached considerable significance to the completion of time periods. As a certain month ended, the next one was treated as 'seated', indicated with a special glyph for the completion of the previous and beginning of the following month, which is usually regarded as day 0. Since it has been assumed that in designating the days of a month the Maya counted only elapsed time. Therefore, as the first day of Pop was not yet concluded, it could not be called 1 Pop. Of that month the first day of the year was *0 Pop* (the seating of Pop), followed by *1 Pop*, *2 Pop* until *19 Pop* and then continue with *0 Wo'*. This might imply that 0 Wo is the first day of the month Wo, but it actually is the last day of the month Pop. (Harris & Stearns, 2010 and Thompson, 1950).
+
+####Table of the Haab' count
+| Num | Name | Glyph | | Num | Name | Glyph | | Num | Name | Glyph | | Num | Name | Glyph |
+|-----|------|-------|-|-----|------|-------|-|-----|------|-------|-|-----|------|-------|
+| 0 | Pop | ![Imix glyph](Glyphs/Haab/Maya-Pop.jpg =50x47) | | 5 | Xul | ![Imix glyph](Glyphs/Haab/Xul.png =50x47) | | 10 | Sak' | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Sak.jpg =50x47) | | 15 | Pax | ![Imix glyph](Glyphs/Haab/Maya-Dresden-pax.jpg =50x47) |
+| 1 | Wo' | ![Imix glyph](Glyphs/Haab/Maya-Dresden-wo.jpg =50x47) | | 6 | YaxK'in' | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Yaxkin.jpg =50x47) | | 11 | Keh | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Keh.jpg =50x47) | | 16 | K'ayab | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Kayab.png =50x47) |
+| 2 | Sip | ![Imix glyph](Glyphs/Haab/Maya-Dresden-sip.jpg =50x47) | | 7 | Mol | ![Imix glyph](Glyphs/Haab/Maya-Mol.png =50x47) | | 12 | Mak | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Mak.png =50x47) | | 17 | Kamk'u | ![Imix glyph](Glyphs/Haab/Maya-Dresden-kumku.jpg =50x47) |
+| 3 | Sotz' | ![Imix glyph](Glyphs/Haab/Sotz.jpg =50x47) | | 8 | Ch'en | ![Imix glyph](Glyphs/Haab/800px-Maya-Dresden-Chen.jpg =50x47) | | 13 | K'anK'in | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Kankin.png =50x47) | | 18 | Wayeb' | ![Imix glyph](Glyphs/Haab/Maya-Dresden-wayeb.jpg =50x47) |
+| 4 | Sek | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Sek.jpg =50x47) | | 9 | Yax | ![Imix glyph](Glyphs/Haab/Maya-Dresden-Yax.jpg =50x47) | | 14 | Muwan' | ![Imix glyph](Glyphs/Haab/Muan.jpg =50x47) | | | | |
+
+*Figure 2: Table of the Haab' count*
+
+###Calendar Round
+A Calendar Round, the Mesoamerican equivalent of our century, date is a notation that gives both the Tzolk'in and Haab' and can pinpoint an event over a greater period of time. Any date will continuously repeat after 18.980 (the least common multiple of 260 (Tzolk'in) and 365 (Haab') is 18.980) days so when an identical date recurs on the calendar it is known as a Calendar Round Completion and 52 years have passed (Thompson, 1950). The Tzolk'in and Haab' calendar were aligned in this greater cycle by associating the Tzolk'in day *4 Ajaw* with the Haab' *8 Kumk'u*. The resulting date of *4 Ajaw 8 Kumk'u* is associated with the creation of the the world in which the Maya lived, so any day in this 52 year cycle is completely specified by both its Tzolk'in and Haab' designations (Harris & Stearns, 2010). 
+
+The amount of 18.890 day is established by calculating the Least Common Multiple (`LCM`) of both the Tzolk'in (`Ft`) and Haab' (`Fh`) date. This can be done by factoring both numbers and calculating the Least Common Multiple.
+
+	CR  = LCM(Ft,Fh)
+	Ft  = 2 2 5 13
+	Fh  =     5    73
+	LCM = 2 * 2 * 5 * 13 * 73
+	CR  = 18.980
+
+According to Harris & Sterns (2010), because the Tzolk'in and Haab' have a common factor (5), not every combination of the two can occur on a full completion of a Calendar Round. Certain day names will always occur with the same group of month numbers, as illustrated in Figure 3.
+
+| If the day name is | Then the month number must be |
+|----------|--------------|
+| Imix', Kimi, Chuwen or K'ib' | 4, 9, 14 or 19 |
+| Ik', Manik', Eb', Kab'an | 0, 5, 10 or 15 |
+| Ak'b'al, Lamat, B'en, Etz'nab' | 1, 6, 11 or 16 |
+| K'an, Muluk, Ix, Kawak | 2, 7, 12 or 17 |
+| Chickchan, Ok, Men, Ajaw | 3, 8, 13 or 18 |
+
+*Figure 3: Possible month numbers by day name*
+
+###Long Count
+The Long Count is used to measure longer periods of time since the Tzolk'in and Haab' calendars only represent, respectively, 260 and 365 days (and the cycle repeat every 18.980 days, approximately 52 solar years), a more refined method of dating was needed to specify dates over periods longer than 52 years (Coe, 2012). 
+
+The Long Count is a perpetual cycle that represents a linear count of days from a mythological point in prehistoric time. Long Count dates are written out as five numbers separated by four periods, such as 13.0.0.0.0 with the following syntax:
+
+	    13     .     0     .   0   .    0    .   0
+	B'ak'tun       Ka'tun     Tun     Winal     K'in
+
+Contrary to our Western base-10 numbering, the Long Count counts in a modified base-20 scheme. As the Winal unit resets after only counting to 17, the Long Count consistently uses a base-20 scheme. The K'in, Tun, Ka'tun and B'ak'tun all start at 0 and end with 19 when the next position will pick up the counting.
+
+The K'in counts up to 19 and then repeats the cycle from 0, when the counting will be picked back up by the next position, the Winal. So one day after 12.0.0.0.19 would become 12.0.0.1.0. Each Winal is thus a block of 20 k'in. The Winal is the exception of the base-20 scheme, as a cycle of 18 Winals represent 1 Tun. So on day after 12.0.0.17.19 would be 12.0.1.0.0 when the Tun takes over and continues base-20. So on day after 12.0.19.17.19 would be 12.1.0.0.0 and one day after 12.19.19.17.19 would be 13.0.0.0.0. (Thompson, 1950).
+
+Harris & Stearns (2010) state that there are only 13 cycles for the B'ak'tun and that one day after 13.0.0.0.0 the date will be notated as 0.0.0.0.1 and thus a new era is created. Other sources like Thompson (1950) don't mention the creation of a new area and continue counting as 13.0.0.0.1. Apparently this is a debatable issue, because various researchers (Thompson (1960), Grofe (2007) and Martin (2012)) appoint counting units of higher order than B'ak'tun, mentioned in figure 4.
+
+####Table of the Long Count units 
+| Long Count unit | Long Count period | Days | Approximate Solar Years |
+|-----------------|-------------------|:-----|:------------------------|
+| 1 K'in |  | 1 |  |	 
+| 1 Winal | 20 K'in | 20 |  |
+| 1 Tun | 18 Winal <sup>*(base-20 exception)*</sup> | 360 | 1 |
+| 1 Ka'tun | 20 Tun | 7.200 | 20 |
+| 1 B'ak'tun | 20 Ka'tun | 144.000 | 394 |
+| 1 PikTun | 20 B'ak'tun | 2.880.000 | 7.885 |
+| 1 KalabTun | 20 PikTun | 57.600.000 | 157.704 |
+| 1 K'inchilTun | 20 KalabTun	 | 1.152.000.000 | 3.154.071 |
+| 1 AlauTun | 20 K'inchilTun | 23.040.000.000 | 63.081.429 |
+
+*Figure 4: Table of the Long Count units*
+
+##Notation
+The Initial Series (IS) is a standard calendrical notation, which on an archetypal Maya monument comprises the opening segment of a text. This section is introduced by the Initial Series Introductory Glyph (ISIG), followed by the Long Count (LC), the Calendar Round (CR) and the according Lord of the Night glyph (Kettunen & Helmke, 2010).
+
+###Initial- and Supplementary series
+According to Coe (2012) most Classic inscriptions begin with the Initial Series, composed of a Long Count date and a day and month notation in the Calendar Round. Between the day and the month inscription usually a group of other glyphs occur that form the Supplementary Series (SS) and present lunar data for the particular day of the Initial Series: the number of days since the last New Moon, the position of that particular lunation in a cycle of six months and whether the lunar month contained 29 or 30 days. Findings in Copán showed that astronomers calculated a formula that held 149 moons to be equal with 4.400 days (which corresponds with 29.53020 days in our terms, only 33 seconds of its own value). 
+
+	+---------------------+   +---------------+
+	|         ISIG        |   |               |
+	+---------------------+   |               |   
+	| B'ak'tun |  Ka'tun  |   |               |
+	+----------+----------+   |    Initial    |
+	|    Tun   |   Winal  |   |               |
+	+----------+----------+   |               |
+	|   K'in   | Tzolk'in |   |               |
+	+----------+----------+   |       +-------| 
+	|   Haab'  |    G     |   |       |       |
+	+----------+----------+   +-------+       |
+	|    Z,Y   |    E     |   |               |
+	+----------+----------+   | Supplementary |
+	|    C,X   |    A     |   |               |
+	+----------+----------+   +---------------|
+	G glyph   : Lord of the Night
+	Z,Y glyph : unknown meaning
+	E glyph   : moon is n days old
+	C glyph   : nth Lunation in series
+	X glyph   : presiding god
+	A glyph   : month has 29/30 days*Figure 5: Initial Series notation*
+
+####Initial Series Introductory Glyph
+The Initial Series Introductory Glyph is, most of the times, an oversized glyph spanning two glyph blocks in notation, see figure 5. Each ISIG has an unique, variable glyph within it that is framed by two comb-like elements. This glyph is indicated as the 'patron of the month' and can be used, in the absence of a Haab' glyph in the IS, used to determine the Haab' month by this patron (Harris & Stearns, 2010).
+
+####Lords of the night
+The nine lords of the underworld, in Maya religion, are a set of nine gods who each ruled over every ninth night forming a  never-ending perpetual calendrical cycle. The names of these gods are unknown, but the glyphs corresponding to these deities are well-known, and were worked out by Thompson (Thompson, 1929). In the absence of proper names, these lords of the underworld were assigned G designations. G Glyphs are usually the very first glyphs seen on monuments after the Haab', and form a continuous 9-day cycle (Coe, 2012).
+
+##Calculation Methods
+A fundamental problems when working with offset dates on our calendrical system is the, so-called, correlation problem: computing an exact date that is defined in both the the Mayan and the Gregorian calendar, thus allowing the Western date to be aligned with its Mayan equivalent and vice versa. 
+
+###Correlation problem
+At this moment there is no full-proof method to exactly align a date on the Western calendar with its Mayan equivalent. According toe Coe (2011) there are currently two methods which comply with most of the conditions to stand a change: the 11.16 (Goodman-Martinez-Thompson, GMT) and 12.9 (Spinden) correlation. To illustrate, the last one would make all the Mayan dates 260 years earlier than the former. 
+
+Numerous scholars have suggested different correlation values, but according to Coe (2011) the most accepted value for the correlation number is that of 584.283 days as proposed in the GMT correlation, published by Thompson (1950). Radiocarbon dating of survived sapodilla wood beams from Tikal, by the University of Pennsylvania, provides overwhelming support for the GMT correlation. Also, in breaking the Maya code, Coe (2012) states "*In spite of oceans of ink that have been spilled on the subject, there now is not the slightest chance that these three scholars (conflated to GMT when talking about the correlation) were not right*". The GMT correlation agrees more closely with the archaeological and inscriptional data found. The correlation has been refined to such a point that there is, today, agreement within a three day range. 
+
+According to Harris & Stearns (2010) archeologists and epigraphers are about evenly split on using the GMT correlation constant of 584.283 and 584.285 days. According to Barnhart (n.d.) the GMT+2 correlation gained popularity amongst scholars "*because certain carved monuments with astronomical data (such as the solar eclipse recorded on a stela from Poco Uinic in Chiapas) correlate better with two days after the original GMT*". The modern Maya in Guatemala however follow the traditional GMT. Out of respect for the living tradition i tend to follow the original GMT correlation constant.
+
+###Compute a Calendar Round for a given Long Count
+According to Harris & Stearns (2010) the process of computing a CR for a given LC involves determining the amount of days that elapsed between a certain base date and the given LC. A complete date consists of four components (Tzolk'in name, Tzolk'in number, Haab' name, Haab' month) that need to be derived from the given LC (`LC`). 
+
+The first thing that can easily be found is the day name. Because there are twenty day names and twenty coefficients for the K'in position, a K'in coefficient always matches a specific day name. Find the K'in coefficient in Figure 1 to determine the day name for the given LC.
+
+The next thing to find is the day number that matches the day name so the Tzolk'in is complete. Figure 6 shows Calendar Round dates for several B'ak'tun completions (Harris & Stearns, 2010).
+
+| Base date | Calendar Round |
+|-----------|----------------|
+| 7.0.0.0.0 | 10 Ajaw 18 Zak |
+| 8.0.0.0.0 | 9 Ajaw 3 Sip |
+| 9.0.0.0.0 | 8 Ajaw 13 Keh |
+| 10.0.0.0.0 | 7 Ajaw 18 Sip |
+| 11.0.0.0.0 | 6 Ajaw 8 Mak |
+| 12.0.0.0.0 | 5 Ajaw 13 Sotz' |
+| 13.0.0.0.0 | 4 Ajaw 8 Kamk'u |
+
+*Figure 6: Base dates with Calendar Round coefficients*
+
+The value of the previous base date (`BD`) for the given LC in figure 6 must be subtracted from the given LC to find the differences (`D`) in the LC positions. These differences result in a starting point to exactly calculate the elapsed days in the cycle. The result for each LC coefficient must be multiplied by the matching days from figure 4 and then divided by 13 (Tzolk'in day numbers, `Rt`) and 365 (a full Haab' completion, `Rh`) to determine the resulting remainders of the two sets.
+
+	Rt = MOD(D1*144000,13) + MOD(D2*7200,13) + MOD(D3*360,13) + MOD(D4*20,13) + MOD(D5*1,13) 
+	Rh = MOD(D1*144000,365) + MOD(D2*7200,365) + MOD(D3*360,365) + MOD(D4*20,365) + MOD(D5*1,365) 
+
+From the CR of the base date in figure 6, the full Tzolk'in notation can be completed by adding the value of the `Rt` variable by the Tzolk'in base date value. This value is the amount of days that have passed. If this value is above 13, it must be divided by 13 so the remainder of this calculation will be the Tzolk'in day number.
+
+The Haab' can be computed by finding the base date in the Haab' cycle in figure 2 and multiply the numerical equivalent from that column by 20. Add the numeric Haab' equivalent from the base date to this number to find the total amount of days in the cycle. From the `Rh` variable it is known that the Haab' cycle has increased with another `n` amount of days so adding these values result in the total days that have passed. As with the Tzolk'in, if this value transcends the 365-day cycle the result must be divided by 365 so the remainder of this calculation can be used to find the Haas' date in figure 2.
+
+###Compute a set of Long Counts for a given Calendar Round
+Harris & Stearns (2010) created a Tun ending table that can be used to compute a set of LC for a given CR. The Tun Ending table, Appendix H in the book, is comprised of 13 columns with entry pairs in each cell and one additional column to the right, as illustrated in figure 7, that determine the day number on which the Tun ends. As mentioned in figure 3, there is a relation between the day name and month number in a Calendar Round cycle. This can be inferred from the rightmost column where the day number is not contained. Possibilities for the day number can be found in the adjoining column pairs. The first column is a shorthand a full Long Count (8.1.15.0.0 in the case of figure 7) and the right entry indicates the day number of the Calendar Round for the Long Count (15 in the case of figure 7). On the next row, the left entry displays the next Tun completion after the one in the column above (8.1.16.0.0 in the case of figure 7).
+
+| | | |
+|-|-|-|
+| 8.1.15 | 12 | Ajaw 13 Keh |
+|    .16 | 8 | Ajaw 8 Keh |
+|    .17 | 4 | Ajaw 3 Keh |
+
+*Figure 7: Small example of the Tun Ending Table from Harris & Stearns (2010)*
+
+Tuns end on Calendar Rounds having Ajaw dates, hence the number of in- or decremental steps to the closest Ajaw date (for a Calendar Round that is not an Ajaw) form the initial position for further calculations. To find the LC, traverse forward or backward from the given Calendar Round to the closest Ajaw date and subtract this `n` days from both the Tzolk'in and Haab'. Consider *12 Lamat 16 Yaxk'in* as the CR to compute the Long Count for. The closest Ajaw from Lamat can be found by traversing 8 steps backward (see figure 1). 8 days before 12 Lamat is **4 Ajaw**. The same can be applied to the Haab' position. 8 days before 16 Yaxk'in is **8 Yaxk'in**. Using the Tun End Table backwards, the Long Count 9.15.13.0.0 can be found as matching to the Calendar Round. The 8 steps that were traversed backwards to find the closest Ajaw need to be added to the LC so the result will become **9.15.13.0.8**.
+
+####Distance numbers
+Since the Maya calendar is cyclical, the computed Long Count is just one out of many options. On every Calendar Round completion the given CR reoccurs with a new Long Count equivalent. To *precisely* compute a Long Count, a timeframe is required. Based on this reference point the CR completions need to be subtracted or added to come within the range of the reference point. Since each Calendar Round cycle repeats itself after 18.900 days, this number must be converted to a Long Count notation. For 1 CR this will be:
+
+| 1 completion | 2 completions | 10 completions |
+|--------------|---------------|----------------|
+| - | - | 189800/14400 = 1 R45800 |
+| 18980/7200 = 2 R4580 | 37960/7200 = 5 R1960 | 45800/7200 = 6 R 2600 |
+| 4500/360 = 12 R260 | 1960/360 = 5 R160 | 2600/360 = 7 R80 |
+| 260/20 = 13 R0 | 160/20 = 8 R0 | 80/2 = 4 R0 |
+| 2.12.13.0 | 5.5.8.0 | 1.6.7.4.0 |
+
+*Figure 8: Example of Distance Number calculations for Calendar Round completions*
+
+According to Harris & Stearns (2010) a Distance Number notation is a reversed order of that used in the Long Count, so a Distance number starts with the K'in coefficient. Contrary to the (almost) always five positions in the Long Count, a Distance Number only contains what is required to represent the count of days. The Distance Number for the completion of one Calendar Round will thus be **0.13.12.2**.
+
+###Aligning the Long Count to the Gregorian calendar
+To align the two calendrical systems, a certain date must be pinpointed on both the Long Count and the Gregorian calendar, hence the elaboration of days since a predefined zero point is required. The Long Count represents a linear count of days from August 11, 3114 BC while astronomers date celestial events using the Julian Day Number (`JDN`): a lineair count of days since a new year's day 4713 BC. To overcome this gap in time, the correlation coefficient needs to be added or subtracted from the JDN to align both calendars (Harris & Stearns, 2010).
+
+####Compute a date on the Gregorian calendar from a Long Count
+According to Sharer & Morley (1994), computing a Gregorian date for a given Long Count can be done by adding the correlation coefficient (`C`). To convert the Long Count to a more workable format, the notation must be multiplied out to find the Maya Day Number (`MDN`) with the formula
+
+	MDN = LC[0]*144.000 + LC[1]*7.200 + LC[2]*360 + LC[3]*20 + LC[4]*1
+
+This resulting integer is the amount of days since the mythical creation of the world on 4 Ajaw 8 Kamk'u 13.0.0.0.0 and when the correlation coefficient is added it results in the Julian Day Number. However, in the Gregorian (contrary to the Mayan) calendar every four year one leap day is added. From the computed JDN the nearest *smaller* Julian day number (`sJDN`) for which a Gregorian date is given in figure 9 need to be subtracted to find the total days of the missing leap years (`L`). Divide these missing leap days by 365 to find the years (`Ly`), the remainder will be the amount of days (`Ld`). Dividing the missing leap years by 4 results in the exact missing leap days. These days must then be subtracted from `Ld` to arrive at the exact day on the Gregorian calendar.
+
+| Year | JDN | | Year | JDN | | Year | JDN |
+|------|-----|-|------|-----|-|------|-----|
+| 1 | 1.721.060 | | 700 | 1.976.730 | | 1400 | 2.232.400 |
+| 100 | 1.757.585 | | 800 | 2.013.254 | | 1500 | 2.268.924 |
+| 200 | 1.794.109 | | 900 | 2.049.779 | | 1600 | 2.305.448 |
+| 300 | 1.830.633 | | 1000 | 2.086.203 | | 1700 | 2.341.973 |
+| 400 | 1.867.157 | | 1100 | 2.122.827 | | 1800 | 2.378.497 |
+| 500 | 1.903.682 | | 1200 | 2.159.351 | | 1900 | 2.415.021 |
+| 600 | 1.940.206 | | 1300 | 2.195.876 | | 2000 | 2.451.545 |
+
+*Figure 9: Julian day numbers (JDN) for January 1 of the Gregorian years AD 1 until 2000* 
+
+####Compute a Long Count from a date on the Gregorian calendar
+<div style="color:red;margin-bottom:25px;">Computing a Long Count from a Gregorian date can be done by reversing the procedure mentioned before.  Convert the Gregorian date to its JDN by finding the closest *smaller* Julian day number (`sJDN`) in figure 9. Multiply the remaining years by 365 to find the total days (`Td`) of the elapsed years, then divide the years by 4 tot find the additional leap days (`Ld`). Convert the day-month notation to an elapsed day notation (`Ed`) and subtract 1 of this value (since the first day in the Julian day count was called day 0 instead of day 1). The sum of all the variables will be the Julian Day Number (`JDN`). At last subtract the correlation coefficient to yield the Maya Day Number for any date on the Gregorian calendar (Sharer & Morley, 1994).</div>
+
+
+
+Computing a Long Count from a Gregorian date can be done by rendering the Julian Day Number (`JDN`) for the Gregorian date notation. To calculate the Julian Day Number (`JDN`) for any day since the year 2000 the forumla `JDN = 2.451.544,5 + 365 * (Y - 2000) + N + L` can be used, where `Y` is the year, `N` is the number of days that have elapsed since January 1 of `Y` and `L` is the number of leap days that have occurred between January 1 2001 and the beginning of `Y`. For dates prior to January 1 2000, the same formula can be used, provided that `L` is negative. (Scott Birney & González, 2006).
+
+To use the formula mentioned above, `N` and `L` need to be calculated. According to Scott Birney & González (2006) the number of elapsed days since the beginning of the given year (`N`) can be computed with the formula `N = ⌊(275*8)/9)⌋ - 2*⌊(8+9)/12⌋ + D - 30` where `D` is the given day number. The missing leap days can simply be found by subtracting 2001 from the giving year (`Y`) and dividing the result by 4, like `L = ⌊(Y - 2001)/4⌋`.
+
+
+	N = ⌊(275*7)/9)⌋ - 2*⌊(7+9)/12⌋ + 6 - 30 = 187
+	L = ⌊(2011 - 2001)/4⌋ = 3
+	JDN = 2.451.544,5 + 365 * (2011 - 2000) + 187 + 3 = 2455749
+
+
+<div style="color:red">Er zit nog ergens een probleem met die -1 en hoe je van datum notatie naar degentellen gaat</div>
+
+july 6, 2011
+
+	sJDN = 2451545
+	Td = 11 * 365 = 4015
+	Ld = 11 / 4 = 2
+	Ed = 186
+	JDN = 186 + 2 + 4015 + 2451545 = 2455748
+	Moet zijn: 2455749
+	
+oktober 12, 1992
+
+	sJDN = 2415021
+	Td = 92 * 365 = 33580
+	Ld = 92 / 4 = 23
+	Ed = 285
+	JDN = 285 + 23 + 33580 + 2415021 = 2448909
+	Moet zijn: 2448908
+
+januari 3, 2016
+
+	sJDN = 2451545
+	Td = 16 * 365 = 5840
+	Ld = 16 / 4 = 4
+	Ed = 3
+	JDN = 3 + 4 + 5840 + 2451545 = 2457392
+	Moet zijn: 2457391
+	
+23 augustus 1985
+
+	sJDN = 2415021
+	Td = 85 * 365 = 31025
+	Ld = 85 / 4 = 21
+	Ed = 234
+	JDN = 234 + 21  + 31025 + 2415021 = 2446301
+	Moet zijn: 2446301
+
+http://bowie.gsfc.nasa.gov/time/julian.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####From Gregorian to Mayan
+Computing a Long Count for a given Gregorian date can be done by reversing the steps mentioned above. First the Gregorian date (`GD`) must be converted to its `JDN`. According to Jefferys (1998) this can be done with the following calculations:
+
+	Y	= year
+	M	= month
+	D	= day
+	A	= Y/100
+	B	= A/4
+	C	= 2-A+B
+	E	= 365,25*(Y+4716)
+	F	= 30,6001*(M+1)
+	JDN	= C+D+E+F-1524,5
+	MDN = JDN-C
+
+Subtract the correlation coefficient from the calculated Julian day number to get its Mayan day number. Divide out the Mayan date number against the Long Count units in figure 3 to get the Long Count value of a given date on the Gregorian calendar.
+
+###Calendar Round
+According to Harris & Stearns (1997) computing a Calendar Round date revolves around two types of problems: a) calculating a Calendar Round when a Long Count date is known; and b) computing a Long Count that matches a Calendar Round. 
+
+The process to define a Calendar Round when a Long Count is known involves the determination of days that have elapsed between a base date and the Long Count date. 
+
+###Calendar Round
+<div style="color: red">To determine the Calendar Round date for any set of Long Count coefficients, i.e., 0.0.0.0.1, a few formulae are needed to be applied. To successfully calculate the Calendar Round from a Long Count date, the starting coordinates in the Calendar Round for Long Count date 0.0.0.0.0 are needed, which are listed in this table:
+
+| Type | Symbol | Coordinate |
+|------|--------|------------|
+| Trecena | `tr` | 4 |
+| Veintena | `v` | 0 |
+| Haab' | `hb` | -17 (or 348, haab' coordinate for 8 Kumk’u on Long Count 0.0.0.0.0) |
+
+<div style="color: red">With this information, the formulae to calculate a Calendar Round date are:
+
+	F1: v  = LC[0]
+	F2: tr = (4 + ((LC[0] * 1) + (LC[1] * -6) + (LC[2] * -4) + (LC[3] * -2) + (LC[4] * -1))) % 13
+	F3: hb = (-17 + ((LC[0] * 1) + (LC[1] * 20) + (LC[2] * -5) + (LC[3] * -100) + (LC[4] * -175))) % 365
+	
+<div style="color: red">The Long Count Coefficient (here abbreviated with `LC`) is denotated as an array used to represent the individual Long Count Unit components. For this formulae, the Long Count notation should be reversed, so `LC[0]` always corresponds with the *K’in* coefficient of the Long Count date.
+
+<div style="color: red">Lounsbury observed that the trecena coefficient moved, forward or backward, directly according to the days passed. Each day that passed incremented or decremented the trecena by one, each Winal incremented or decremented by 20, and so on. However, these shifts can be reduced by taking them modulo 13, and if `tr % 13 = 0`, substitute 13; therefore, the real shift for the Winal is either 7 or -6, depending on which is prefered to use (the distance between the negative shift and the positive one must add to 13), being equivalent. For Tuns, the shift is either 9 or -4; for k’aTuns, 11 or -2. This can be further simplified so that a table of all shifts, both positive and negative, need not be kept for all positions in the Long Count (bak’Tuns, pikTuns, and so on), but may instead be rather quickly calculated. He observed that, except for the Tun position, each shift is 7 times the shift of the position to its right. In the Tun position, the multiplier is 5 instead of 7, due to the odd radix (18 instead of 20).
+
+| Period | Coeffecient (`LC`) | Trecena Multiplier (`m`) |
+|--------|--------------------|--------------------------|
+| K’in | 0 (`LC[0]`) | 1 |
+| Winal | 1 (`LC[1]`) | -6 (or 7) |
+| Tun | 2 (`LC[2]`) | -4 (or 9) |
+| K’aTun | 3 (`LC[3]`) | -2 (or 11) |
+| Bak’Tun | 4 (`LC[4]`)	 | -1 (or 12) |
+
+<div style="color: red">Floyd made the same general observation about the Haab'. For each day incremented or decremented from any starting point, the Haab' position also incremented or decremented by 1. For each Winal, the Haab' position also moves 20 days, for each Tun, it moved either 360 or -5 days, and so on. The result will be the Haab' number and need to be converted to a Haab' day `hd` and Haab' month `hm` by, respectively, *modulo* 20 and *divide* by 20.
+
+| Period | Coeffecient (LC) | Haab Multiplier (mh) |
+|--------|------------------|----------------------|
+| K'in | 0 (`LC[0]`) | 1 |
+| Winal | 1 (`LC[1]`) | 20 |
+| Tun | 2 (`LC[2]`) | -5 |
+| K’aTun | 3 (`LC[3]`) | -100 |
+| Bak’Tun | 4 (`LC[4]`) | -175 |
+
+###Lord of the night
+The mathematics of Glyph G are straightforward and based on the last two digits of a long count, then the following formula can be applied:
+
+	G = ((2 * LC[1]) + LC[0]) % 9
+
+##Results
+The date to get on the Mayan calendar is my sons birthday: July 6, 2011.
+	
+
+###Long Count
+
+	Y	= 2011
+	M	= 7
+	D	= 6
+	A	= 2011 / 100 							= 20
+	B	= 20 / 4 								= 5
+	C	= 2 - 20 + 5 							= -13
+	E	= 365,25 x (2011 + 4716) 				= 2.457.036
+	F	= 30,6001 x (7 + 1) 					= 244
+	JDN	= -13 + 6 + 2.457.036 + 244 - 1524,5 	= 2.455.749
+	MDN = 2.455.749 - 584.283					= 1.871.466
+	
+| Multiply Long Count out |
+|------------------------------|
+| *12 B'ak'tun* (`12 * 144.000 = 1.728.000`). Remains: 143.466 |
+| *19 Ka'tun* (`19 * 7.200 = 136.800`). Remains: 6666 | 
+| *18 Tun* (`18 * 360 = 6480`). Remains: 186 | 
+| *9 Winal* (`9 * 20 = 180`). Remains: 6 |
+| *6 K'in* | *6 K'in* |
+
+###Calendar Round
+| Calendar round from Long Count 12.19.18.9.6 |
+|------------------------------|
+| LC = 6.9.18.19.12 |
+| v = 6 = Kimi |
+| `tr = (4 + ((6 * 1) + (9 * -6) + (18 * -4) + (19 * -2) + (12 * -1))) % 13` |
+| tr = 3 |
+| `hb = (-17 + ((6 * 1) + (9 * 20) + (18 * -5) + (19 * -100) + (12 * -175))) % 365` |
+| hb = 94 |
+| `hd = 94 % 20` |
+| hd = 14 |
+| `hm = 94 / 20` |
+| hm = 4,7 = 4 = Sek |
+| *3 Kimi 14 Sek* |
+
+###Lord of the night
+| Lord of the Night from Long Count 12.19.18.9.6 |
+|------------------------------|
+| LC = 6.9.18.19.12 |
+| LC[0] = 6 |
+| LC[1] = 9 |
+| `G = ((2 * 9) + 6) % 9` |
+| G = 6 |
+
+##References
+
+Barnhart, E. (n.d.). *The Correlation Debate*. Retrieved from http://mayan-calendar.com/ancient_correlation.html
+
+Coe, M. D. (2012) *Breaking the Maya code*. London: Thames & Hudson
+
+Coe, M. D. (2011) *The Maya (Eight Edition)*. London: Thames & Hudson
+
+Grove M. J. (2007). *The Serpent Series: Precession in the Maya Dresden Codex* (Unpublished doctoral dissertation). University of California, Oakland.
+
+Harris, J. S., Stearns, S. K. (2010) *Understanding Maya Inscriptions - A Hieroglyph Handbook*. Philadelphia: The University of Pennsylvania Museum of Archaeology and Anthropology
+
+ISO, (2004). *ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Representation of dates and times*. Geneva, Switzerland: ISO. 
+
+Jefferys, B. (1998) *Julian day numbers*. Retrieved from: http://quasar.as.utexas.edu/BillInfo/JulianDatesG.html
+
+Kettunen, H., Helmke, C. (2010). *Introduction to Maya Hieroglyphs*. The European Association of Mayanists, Wayeb
+
+Malmström, V. H. (1973). *Origin of the Mesoamerican 260-Day Calendar*. Science 181 (4103): 939–941.
+
+Martin, S. (2012). *Time, Kingship and the Maya Universe*. Expedition, 54(1), 18-25. http://www.penn.museum/documents/publications/expedition/PDFs/54-1/time-kingship-and-the-maya-universe.pdf 
+
+Thompson, J. Eric S. (1950) *Maya Hyroglyphic Writing: An Introduction*. Washington DC: Garnegie Institution of Washington
+
+Scott Birney, D., González, G. (2006) *Observational Astronomy*. Cambridge: Cambridge University Press
+
+Sharer, R., Morley, J. (1994) *The Ancient Maya, Second edition* Stanford: Stanford University Press
+
+Steel, D. (2001) *Marking Time: The Epic Quest to Invent the Perfect Calendar*. Hoboken: John Wiley & Sons
