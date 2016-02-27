@@ -196,14 +196,14 @@ Tuns end on Calendar Rounds having Ajaw dates, hence the number of in- or decrem
 Consider *12 Lamat 16 Yaxk'in* as the Calendar Round to compute the set of Long Counts for. The closest Ajaw from Lamat can be found by traversing 8 steps backward (see figure 1). 8 days before 12 Lamat is **4 Ajaw**. The same can be applied to the Haab' position. 8 days before 16 Yaxk'in is **8 Yaxk'in**. Using the Tun Ending Table backwards, the Long Count 9.15.13.0.0 can be found as matching to the Calendar Round. The 8 steps that were traversed backwards to find the closest Ajaw need to be added to the Long Count so the result will become **9.15.13.0.8**.
 
 ####Distance numbers
-Since the Maya calendar is cyclical, the computed Long Count is just one out of many options. On every Calendar Round completion the given CR reoccurs with a new Long Count equivalent. To *precisely* compute a Long Count, a timeframe is required. Based on this reference point the CR completions need to be subtracted or added to come within the range of the reference point. Since each Calendar Round cycle repeats itself after 18.900 days, this number must be converted to a Long Count notation. For 1 CR this will be:
+Since the Maya calendar is cyclical, the computed Long Count is just one out of many options. On every Calendar Round completion the given Calendar Round reoccurs with a new Long Count equivalent. To *precisely* compute a Long Count, a timeframe is required. Based on this reference point the Calendar Round completions need to be subtracted or added to come within the range of the reference point. Since each Calendar Round cycle repeats itself after 18.900 days, this number must be converted to a Long Count notation. For 1 CR this will be:
 
 | 1 completion | 2 completions | 10 completions |
 |--------------|---------------|----------------|
-| - | - | 189800/14400 = 1 R45800 |
-| 18980/7200 = 2 R4580 | 37960/7200 = 5 R1960 | 45800/7200 = 6 R 2600 |
-| 4500/360 = 12 R260 | 1960/360 = 5 R160 | 2600/360 = 7 R80 |
-| 260/20 = 13 R0 | 160/20 = 8 R0 | 80/2 = 4 R0 |
+| - | - | 189800/14400 = 1 `R`45800 |
+| 18980/7200 = 2 `R`4580 | 37960/7200 = 5 `R`1960 | 45800/7200 = 6 `R`2600 |
+| 4500/360 = 12 `R`260 | 1960/360 = 5 `R`160 | 2600/360 = 7 `R`80 |
+| 260/20 = 13 `R`0 | 160/20 = 8 `R`0 | 80/2 = 4 `R`0 |
 | 2.12.13.0 | 5.5.8.0 | 1.6.7.4.0 |
 
 *Figure 8: Example of Distance Number calculations for Calendar Round completions*
