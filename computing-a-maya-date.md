@@ -149,12 +149,12 @@ At this moment there is no full-proof method to exactly align a date on the West
 
 Numerous scholars have suggested different correlation values, but according to Coe (2011) the most accepted value for the correlation number is that of 584.283 days as proposed in the GMT correlation, published by Thompson (1950). Radiocarbon dating of survived sapodilla wood beams from Tikal, by the University of Pennsylvania, provides overwhelming support for the GMT correlation. Also, in breaking the Maya code, Coe (2012) states "*In spite of oceans of ink that have been spilled on the subject, there now is not the slightest chance that these three scholars (conflated to GMT when talking about the correlation) were not right*". The GMT correlation agrees more closely with the archaeological and inscriptional data found. The correlation has been refined to such a point that there is, today, agreement within a three day range. 
 
-According to Harris & Stearns (2010) archeologists and epigraphers are about evenly split on using the GMT correlation constant of 584.283 and 584.285 days. According to Barnhart (n.d.) the GMT+2 correlation gained popularity amongst scholars "*because certain carved monuments with astronomical data (such as the solar eclipse recorded on a stela from Poco Uinic in Chiapas) correlate better with two days after the original GMT*". The modern Maya in Guatemala however follow the traditional GMT. Out of respect for the living tradition i tend to follow the original GMT correlation constant.
+According to Harris & Stearns (2010) archeologists and epigraphers are about evenly split on using the GMT correlation constant of 584.283 and 584.285 days. According to Barnhart (n.d.) the GMT+2 correlation gained popularity amongst scholars "*because certain carved monuments with astronomical data (such as the solar eclipse recorded on a stela from Poco Uinic in Chiapas) correlate better with two days after the original GMT*". The modern Maya in Guatemala however follow the traditional GMT. Out of respect for the living tradition i tend to follow the original GMT correlation constant of 584.283 days.
 
 ###Compute a Calendar Round for a given Long Count
-According to Harris & Stearns (2010) the process of computing a CR for a given LC involves determining the amount of days that elapsed between a certain base date and the given LC. A complete date consists of four components (Tzolk'in name, Tzolk'in number, Haab' name, Haab' month) that need to be derived from the given LC (`LC`). 
+According to Harris & Stearns (2010) the process of computing a Calendar Round for a given Long Count involves determining the amount of days that elapsed between a certain base date and the given Long Count. A complete date consists of four components (Tzolk'in day name, Tzolk'in day number, Haab' name, Haab' month) that need to be derived from the given Long Count. 
 
-The first thing that can easily be found is the day name. Because there are twenty day names and twenty coefficients for the K'in position, a K'in coefficient always matches a specific day name. Find the K'in coefficient in Figure 1 to determine the day name for the given LC.
+The first thing that can easily be found is the day name. Because there are twenty day names and twenty coefficients for the K'in position, a K'in coefficient always matches a specific day name. Find the K'in coefficient in Figure 1 to determine the day name for the given Long Count.
 
 The next thing to find is the day number that matches the day name so the Tzolk'in is complete. Figure 6 shows Calendar Round dates for several B'ak'tun completions (Harris & Stearns, 2010).
 
@@ -170,12 +170,13 @@ The next thing to find is the day number that matches the day name so the Tzolk'
 
 *Figure 6: Base dates with Calendar Round coefficients*
 
-The value of the previous base date (`BD`) for the given LC in figure 6 must be subtracted from the given LC to find the differences (`D`) in the LC positions. These differences result in a starting point to exactly calculate the elapsed days in the cycle. The result for each LC coefficient must be multiplied by the matching days from figure 4 and then divided by 13 (Tzolk'in day numbers, `Rt`) and 365 (a full Haab' completion, `Rh`) to determine the resulting remainders of the two sets.
+The value of the previous base date (`BD`) for the given Long Count in figure 6 must be subtracted from the given Long Count to find the differences (`D`) in the Long Count positions. These differences result in a starting point to exactly calculate the elapsed days in the cycle. The result for each Long Count coefficient must be multiplied by the matching days from figure 4 and then divided by 13 (Tzolk'in day numbers, `Rt`) and 365 (a full Haab' completion, `Rh`) to determine the resulting remainders of the two sets by the modulo operator.
 
-	Rt = MOD(D1*144000,13) + MOD(D2*7200,13) + MOD(D3*360,13) + MOD(D4*20,13) + MOD(D5*1,13) 
-	Rh = MOD(D1*144000,365) + MOD(D2*7200,365) + MOD(D3*360,365) + MOD(D4*20,365) + MOD(D5*1,365) 
+![Tzolk'in remainders](Equations/tzolkin-remainders.svg)
 
-From the CR of the base date in figure 6, the full Tzolk'in notation can be completed by adding the value of the `Rt` variable by the Tzolk'in base date value. This value is the amount of days that have passed. If this value is above 13, it must be divided by 13 so the remainder of this calculation will be the Tzolk'in day number.
+![Haab remainders](Equations/haab-remainders.svg)
+
+From the Calendar Round of the base date in figure 6, the full Tzolk'in notation can be completed by adding the value of the `Rt` variable to the Tzolk'in base date value. This value is the amount of elapsed days. If this value is above 13, it must be divided by 13 so the remainder of this calculation will be the Tzolk'in day number.
 
 The Haab' can be computed by finding the base date in the Haab' cycle in figure 2 and multiply the numerical equivalent from that column by 20. Add the numeric Haab' equivalent from the base date to this number to find the total amount of days in the cycle. From the `Rh` variable it is known that the Haab' cycle has increased with another `n` amount of days so adding these values result in the total days that have passed. As with the Tzolk'in, if this value transcends the 365-day cycle the result must be divided by 365 so the remainder of this calculation can be used to find the Haas' date in figure 2.
 
