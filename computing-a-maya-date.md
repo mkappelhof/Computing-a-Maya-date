@@ -232,57 +232,25 @@ This resulting integer is the amount of days since the mythical creation of the 
 ####Compute a Long Count from a date on the Gregorian calendar
 <div style="color:red;margin-bottom:25px;">Computing a Long Count from a Gregorian date can be done by reversing the procedure mentioned before.  Convert the Gregorian date to its JDN by finding the closest *smaller* Julian day number (`sJDN`) in figure 9. Multiply the remaining years by 365 to find the total days (`Td`) of the elapsed years, then divide the years by 4 tot find the additional leap days (`Ld`). Convert the day-month notation to an elapsed day notation (`Ed`) and subtract 1 of this value (since the first day in the Julian day count was called day 0 instead of day 1). The sum of all the variables will be the Julian Day Number (`JDN`). At last subtract the correlation coefficient to yield the Maya Day Number for any date on the Gregorian calendar (Sharer & Morley, 1994).</div>
 
+Computing a set of Long Counts for a given date on the Gregorian calendar revolves around the Julian Day Number (`JDN`). This number is the amount of consecutive elapsed days since January 1st 4713 BC, *midday* as measured on the Greenwich meridian. Since the Julian date is based on a midday measurement, each new Julian day begins at 12:00 UT time hence the outcome of a Julian Date might contain a decimal, dependant of the time of measurement (Duffett-Smith, 1989). 
+
+To calculate the Julian date, the number of elapsed days since the beginning of the given year (`N`) and the missing leap days (`Ld`) need to be computed. First determine if the given year (`Y`) is a leap-year by checking if `Y` is evenly divisible by 4, but not by 100, unless it is also evenly divisible by 400. Because leap-years consist of 366, contrary to the regular 365, days, the multiplier of the second integer will either be 1 for leap years and 2 for none-leap years. Then, the formulas below can be used to compute the day number and leap days. The expression `int` refers to the integer part of the number within the subsequent brackets (Scott Birney & González, 2006).
+
+![Day number in a given year](Equations/day-number-in-year.svg)
+
+![Leap days](Equations/leap-days.svg)
+
+Note that, according to Duffett-Smith (1989), on many computers and calculators `int` refers to the least-integer function and render -4 for `int(-3.842)` while the value should be -3. To overcome this inconvenience the integer part of the positive equivalent should be computed and placed after a negative sign in the formula.
+
+With these variables in place the Julian day number at 0:00 UT time for a given date can be calculated with the formula `JDN = 2.451.544,5 + 365 * (Y - 2000) + N - Ld`. To precisely calculate the day, the decimal fraction of the day at the given Universal time should be added (Scott Birney & González, 2006).
+
+ 
 
 
-Computing a Long Count from a Gregorian date can be done by rendering the Julian Day Number (`JDN`) for the Gregorian date notation. To calculate the Julian Day Number (`JDN`) for any day since the year 2000 the forumla `JDN = 2.451.544,5 + 365 * (Y - 2000) + N + L` can be used, where `Y` is the year, `N` is the number of days that have elapsed since January 1 of `Y` and `L` is the number of leap days that have occurred between January 1 2001 and the beginning of `Y`. For dates prior to January 1 2000, the same formula can be used, provided that `L` is negative. (Scott Birney & González, 2006).
-
-To use the formula mentioned above, `N` and `L` need to be calculated. According to Scott Birney & González (2006) the number of elapsed days since the beginning of the given year (`N`) can be computed with the formula `N = ⌊(275*8)/9)⌋ - 2*⌊(8+9)/12⌋ + D - 30` where `D` is the given day number. The missing leap days can simply be found by subtracting 2001 from the giving year (`Y`) and dividing the result by 4, like `L = ⌊(Y - 2001)/4⌋`.
 
 
-	N = ⌊(275*7)/9)⌋ - 2*⌊(7+9)/12⌋ + 6 - 30 = 187
-	L = ⌊(2011 - 2001)/4⌋ = 3
-	JDN = 2.451.544,5 + 365 * (2011 - 2000) + 187 + 3 = 2455749
 
 
-<div style="color:red">Er zit nog ergens een probleem met die -1 en hoe je van datum notatie naar degentellen gaat</div>
-
-july 6, 2011
-
-	sJDN = 2451545
-	Td = 11 * 365 = 4015
-	Ld = 11 / 4 = 2
-	Ed = 186
-	JDN = 186 + 2 + 4015 + 2451545 = 2455748
-	Moet zijn: 2455749
-	
-oktober 12, 1992
-
-	sJDN = 2415021
-	Td = 92 * 365 = 33580
-	Ld = 92 / 4 = 23
-	Ed = 285
-	JDN = 285 + 23 + 33580 + 2415021 = 2448909
-	Moet zijn: 2448908
-
-januari 3, 2016
-
-	sJDN = 2451545
-	Td = 16 * 365 = 5840
-	Ld = 16 / 4 = 4
-	Ed = 3
-	JDN = 3 + 4 + 5840 + 2451545 = 2457392
-	Moet zijn: 2457391
-	
-23 augustus 1985
-
-	sJDN = 2415021
-	Td = 85 * 365 = 31025
-	Ld = 85 / 4 = 21
-	Ed = 234
-	JDN = 234 + 21  + 31025 + 2415021 = 2446301
-	Moet zijn: 2446301
-
-http://bowie.gsfc.nasa.gov/time/julian.html
 
 
 
@@ -419,6 +387,8 @@ Barnhart, E. (n.d.). *The Correlation Debate*. Retrieved from http://mayan-calen
 Coe, M. D. (2012) *Breaking the Maya code*. London: Thames & Hudson
 
 Coe, M. D. (2011) *The Maya (Eight Edition)*. London: Thames & Hudson
+
+Buffett-Smith, P. (1989) *Practical Astronomy with your Calculator*. Cambridge: Cambridge University Press
 
 Grove M. J. (2007). *The Serpent Series: Precession in the Maya Dresden Codex* (Unpublished doctoral dissertation). University of California, Oakland.
 
