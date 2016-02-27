@@ -247,34 +247,31 @@ With these variables in place the Julian day number at 0:00 UT time for a given 
 
 Finally subtract the correlation coefficient from the calculated Julian day number to yield the Maya day number. Divide out the Maya date number against the Long Count units in figure 3 to generate the Long Count value of a given date on the Gregorian calendar.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###Lord of the night
-The mathematics of Glyph G are straightforward and based on the last two digits of a long count, then the following formula can be applied:
+The mathematics of Glyph G are straightforward and based on the last two digits of a long count. Convert the K'in and Winal positions to a decimal number and add these up to find the period in days. Divide these days by 9 and multiply the remainder by 9 to find the ruling Lord of the Night after rounding the outcome up (Johnson, 2014).
 
-	G = ((2 * LC[1]) + LC[0]) % 9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ##Results
 The date to get on the Mayan calendar is my sons birthday: July 6, 2011.
@@ -342,6 +339,8 @@ Harris, J. S., Stearns, S. K. (2010) *Understanding Maya Inscriptions - A Hierog
 ISO, (2004). *ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Representation of dates and times*. Geneva, Switzerland: ISO. 
 
 Jefferys, B. (1998) *Julian day numbers*. Retrieved from: http://quasar.as.utexas.edu/BillInfo/JulianDatesG.html
+
+Johnson, S.A.J. (2014) *Translating Maya Hieroglyphs* Norman: University of Oklahoma Press
 
 Kettunen, H., Helmke, C. (2010). *Introduction to Maya Hieroglyphs*. The European Association of Mayanists, Wayeb
 
