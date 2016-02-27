@@ -244,7 +244,7 @@ Note that, according to Duffett-Smith (1989), on many computers and calculators 
 
 With these variables in place the Julian day number at 0:00 UT time for a given date can be calculated with the formula `JDN = 2.451.544,5 + 365 * (Y - 2000) + N - Ld`. To precisely calculate the day, the decimal fraction of the day at the given Universal time should be added (Scott Birney & González, 2006).
 
- 
+Finally subtract the correlation coefficient from the calculated Julian day number to yield the Maya day number. Divide out the Maya date number against the Long Count units in figure 3 to generate the Long Count value of a given date on the Gregorian calendar.
 
 
 
@@ -268,63 +268,7 @@ With these variables in place the Julian day number at 0:00 UT time for a given 
 
 
 
-####From Gregorian to Mayan
-Computing a Long Count for a given Gregorian date can be done by reversing the steps mentioned above. First the Gregorian date (`GD`) must be converted to its `JDN`. According to Jefferys (1998) this can be done with the following calculations:
 
-	Y	= year
-	M	= month
-	D	= day
-	A	= Y/100
-	B	= A/4
-	C	= 2-A+B
-	E	= 365,25*(Y+4716)
-	F	= 30,6001*(M+1)
-	JDN	= C+D+E+F-1524,5
-	MDN = JDN-C
-
-Subtract the correlation coefficient from the calculated Julian day number to get its Mayan day number. Divide out the Mayan date number against the Long Count units in figure 3 to get the Long Count value of a given date on the Gregorian calendar.
-
-###Calendar Round
-According to Harris & Stearns (1997) computing a Calendar Round date revolves around two types of problems: a) calculating a Calendar Round when a Long Count date is known; and b) computing a Long Count that matches a Calendar Round. 
-
-The process to define a Calendar Round when a Long Count is known involves the determination of days that have elapsed between a base date and the Long Count date. 
-
-###Calendar Round
-<div style="color: red">To determine the Calendar Round date for any set of Long Count coefficients, i.e., 0.0.0.0.1, a few formulae are needed to be applied. To successfully calculate the Calendar Round from a Long Count date, the starting coordinates in the Calendar Round for Long Count date 0.0.0.0.0 are needed, which are listed in this table:
-
-| Type | Symbol | Coordinate |
-|------|--------|------------|
-| Trecena | `tr` | 4 |
-| Veintena | `v` | 0 |
-| Haab' | `hb` | -17 (or 348, haab' coordinate for 8 Kumk’u on Long Count 0.0.0.0.0) |
-
-<div style="color: red">With this information, the formulae to calculate a Calendar Round date are:
-
-	F1: v  = LC[0]
-	F2: tr = (4 + ((LC[0] * 1) + (LC[1] * -6) + (LC[2] * -4) + (LC[3] * -2) + (LC[4] * -1))) % 13
-	F3: hb = (-17 + ((LC[0] * 1) + (LC[1] * 20) + (LC[2] * -5) + (LC[3] * -100) + (LC[4] * -175))) % 365
-	
-<div style="color: red">The Long Count Coefficient (here abbreviated with `LC`) is denotated as an array used to represent the individual Long Count Unit components. For this formulae, the Long Count notation should be reversed, so `LC[0]` always corresponds with the *K’in* coefficient of the Long Count date.
-
-<div style="color: red">Lounsbury observed that the trecena coefficient moved, forward or backward, directly according to the days passed. Each day that passed incremented or decremented the trecena by one, each Winal incremented or decremented by 20, and so on. However, these shifts can be reduced by taking them modulo 13, and if `tr % 13 = 0`, substitute 13; therefore, the real shift for the Winal is either 7 or -6, depending on which is prefered to use (the distance between the negative shift and the positive one must add to 13), being equivalent. For Tuns, the shift is either 9 or -4; for k’aTuns, 11 or -2. This can be further simplified so that a table of all shifts, both positive and negative, need not be kept for all positions in the Long Count (bak’Tuns, pikTuns, and so on), but may instead be rather quickly calculated. He observed that, except for the Tun position, each shift is 7 times the shift of the position to its right. In the Tun position, the multiplier is 5 instead of 7, due to the odd radix (18 instead of 20).
-
-| Period | Coeffecient (`LC`) | Trecena Multiplier (`m`) |
-|--------|--------------------|--------------------------|
-| K’in | 0 (`LC[0]`) | 1 |
-| Winal | 1 (`LC[1]`) | -6 (or 7) |
-| Tun | 2 (`LC[2]`) | -4 (or 9) |
-| K’aTun | 3 (`LC[3]`) | -2 (or 11) |
-| Bak’Tun | 4 (`LC[4]`)	 | -1 (or 12) |
-
-<div style="color: red">Floyd made the same general observation about the Haab'. For each day incremented or decremented from any starting point, the Haab' position also incremented or decremented by 1. For each Winal, the Haab' position also moves 20 days, for each Tun, it moved either 360 or -5 days, and so on. The result will be the Haab' number and need to be converted to a Haab' day `hd` and Haab' month `hm` by, respectively, *modulo* 20 and *divide* by 20.
-
-| Period | Coeffecient (LC) | Haab Multiplier (mh) |
-|--------|------------------|----------------------|
-| K'in | 0 (`LC[0]`) | 1 |
-| Winal | 1 (`LC[1]`) | 20 |
-| Tun | 2 (`LC[2]`) | -5 |
-| K’aTun | 3 (`LC[3]`) | -100 |
-| Bak’Tun | 4 (`LC[4]`) | -175 |
 
 ###Lord of the night
 The mathematics of Glyph G are straightforward and based on the last two digits of a long count, then the following formula can be applied:
