@@ -17,9 +17,9 @@ Ever since time immemorial humans had the need to pinpoint the happening of an e
 
 The Julian calender originated as a Roman calendar, which spread throughout most of the Christian world and was, in the course of the 16th to the 20th century, gradually substituted by the **Gregorian calendar**, because the Julian calendar was each year a few minutes behind on the solar year. The Gregorian calendar became in effect on October 15, 1582. To cover dates before that day, the **Proleptic Gregorian calendar** is produced by extending the Gregorian calendar backwards to dates preceding its official introduction. 
 
-The Proleptic Gregorian Calendar, however, only renders identical dates with the Julian calendar between March 1, 200 AD and February 28, 300 AD. Traversing backwards from that period until 4713 BC, 38 leap-years are missing on the Proleptic Gregorian calendar which do appear on the Julian calendar. So a particular day on the Gregorian calendar in that early era is 28 days prior to that day in the Julian calendar. For example: Monday November 24, 4714 BC Proleptic Gregorian corresponds with January 1, 4714 BC Julian (Steel, 2001). 
+The Proleptic Gregorian Calendar, however, only renders identical dates with the Julian calendar between March 1, 200 AD and February 28, 300 AD. Traversing backwards from that period until 4713 BC, 38 leap-years are missing on the Proleptic Gregorian calendar which do appear on the Julian calendar. So a particular day on the Gregorian calendar in that early era is 28 days prior to that day in the Julian calendar (Steel, 2001). 
 
-The ISO 8601 norm however, which applies to representations and formats of dates in the Gregorian (and potentially proleptic Gregorian) calendar, states the following:
+The ISO 8601 norm, which applies to representations and formats of dates in the Gregorian (and potentially proleptic Gregorian) calendar, however states the following:
 
 > Earlier dates, in the proleptic Gregorian calendar, may be used by mutual agreement of the partners exchanging information. The standard states that every date must be consecutive, so usage of the Julian calendar would be contrary to the standard (because at the switchover date, the dates would not be consecutive)
 
