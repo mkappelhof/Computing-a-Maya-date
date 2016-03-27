@@ -61,9 +61,11 @@ Just like the Tzolk'in, each named-day in the Haab' cycle is accompanied by a nu
 *Figure 2: Table of the Haab' count*
 
 ###Calendar Round
-A Calendar Round, the Mesoamerican equivalent of our century, date is a notation that gives both the Tzolk'in and Haab' and can pinpoint an event over a greater period of time. Any date will continuously repeat after 18.980 (the least common multiple of 260 (Tzolk'in) and 365 (Haab') is 18.980) days so when an identical date recurs on the calendar it is known as a Calendar Round Completion and 52 years have passed (Thompson, 1950). The Tzolk'in and Haab' calendar were aligned in this greater cycle by associating the Tzolk'in day *4 Ajaw* with the Haab' *8 Kumk'u*. The resulting date of *4 Ajaw 8 Kumk'u* is associated with the creation of the the world in which the Maya lived, so any day in this 52 year cycle is completely specified by both its Tzolk'in and Haab' designations (Harris & Stearns, 2010). 
+A Calendar Round, the Mesoamerican equivalent of our century, is a notation that gives both the Tzolk'in and Haab' and can pinpoint an event over a greater period of time. Any date will continuously repeat after 18.980 days so when an identical date recurs on the calendar it is known as a Calendar Round completion and 52 years have passed (Thompson, 1950).
 
-The amount of 18.890 day is established by calculating the Least Common Multiple (`LCM`) of both the Tzolk'in (`Ft`) and Haab' (`Fh`) date. This can be done by factoring both numbers and calculating the Least Common Multiple.
+The Tzolk'in and Haab' calendar were aligned in this greater cycle by combining the Tzolk'in day *4 Ajaw* with the Haab' *8 Kumk'u*. The resulting date of *4 Ajaw 8 Kumk'u* is associated with the creation of the the world in which the Maya lived, so any day in this 52 year cycle is completely specified by both its Tzolk'in and Haab' designations (Harris & Stearns, 2010). 
+
+The period of a full Calendar Round (`CR`) completion is established by calculating the Least Common Multiple (`LCM`) of both the Tzolk'in (`Ft`) and Haab' (`Fh`) date. This can be done by factoring both numbers and calculating the Least Common Multiple.
 
 	CR  = LCM(Ft,Fh)
 	Ft  = 2 2 5 13
@@ -71,7 +73,7 @@ The amount of 18.890 day is established by calculating the Least Common Multiple
 	LCM = 2 * 2 * 5 * 13 * 73
 	CR  = 18.980
 
-According to Harris & Sterns (2010), because the Tzolk'in and Haab' have a common factor (5), not every combination of the two can occur on a full completion of a Calendar Round. Certain day names will always occur with the same group of month numbers, as illustrated in Figure 3.
+According to Harris & Sterns (2010), because the Tzolk'in and Haab' have a common factor (5), not every combination of the two can occur on a full Calendar Round completion. Certain day names will always occur with the same group of month numbers, as illustrated in Figure 3.
 
 | If the day name is | Then the month number must be |
 |----------|--------------|
