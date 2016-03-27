@@ -86,16 +86,12 @@ According to Harris & Sterns (2010), because the Tzolk'in and Haab' have a commo
 *Figure 3: Possible month numbers by day name*
 
 ###Long Count
-The Long Count is used to measure longer periods of time since the Tzolk'in and Haab' calendars only represent, respectively, 260 and 365 days (and the cycle repeat every 18.980 days, approximately 52 solar years), a more refined method of dating was needed to specify dates over periods longer than 52 years (Coe, 2012). 
-
-The Long Count is a perpetual cycle that represents a linear count of days from a mythological point in prehistoric time. Long Count dates are written out as five numbers separated by four periods, such as 13.0.0.0.0 with the following syntax:
+Since the Calendar Round only covers a period of 52 years, a more refined method of dating was needed to specify dates over greater periods, hence the Long Count is initiated. The Long Count is a perpetuate cycle that represents a linear count of days from a mythological point in prehistoric time. Long Count dates are written out as five numbers separated by four periods, such as 13.0.0.0.0 with the following syntax:
 
 	    13     .     0     .   0   .    0    .   0
 	B'ak'tun       Ka'tun     Tun     Winal     K'in
 
-Contrary to our Western base-10 numbering, the Long Count counts in a modified base-20 scheme. As the Winal unit resets after only counting to 17, the Long Count consistently uses a base-20 scheme. The K'in, Tun, Ka'tun and B'ak'tun all start at 0 and end with 19 when the next position will pick up the counting.
-
-The K'in counts up to 19 and then repeats the cycle from 0, when the counting will be picked back up by the next position, the Winal. So one day after 12.0.0.0.19 would become 12.0.0.1.0. Each Winal is thus a block of 20 k'in. The Winal is the exception of the base-20 scheme, as a cycle of 18 Winals represent 1 Tun. So on day after 12.0.0.17.19 would be 12.0.1.0.0 when the Tun takes over and continues base-20. So on day after 12.0.19.17.19 would be 12.1.0.0.0 and one day after 12.19.19.17.19 would be 13.0.0.0.0. (Thompson, 1950).
+Contrary to our Western base-10 numbering, the Long Count counts in a modified base-20 scheme as the Winal unit resets after only counting to 17. The K'in, Tun, Ka'tun and B'ak'tun all start at 0 and end with 19 when the next position will pick up the counting. So one day after 12.0.0.0.19 would become 12.0.0.1.0. Each Winal is thus a block of 20 k'in and a cycle of 18 Winals represent 1 Tun. So on e day after 12.0.0.17.19 would be 12.0.1.0.0 when the Tun takes over and continues base-20. So on day after 12.0.19.17.19 would be 12.1.0.0.0 and one day after 12.19.19.17.19 would be 13.0.0.0.0. (Thompson, 1950).
 
 Harris & Stearns (2010) state that there are only 13 cycles for the B'ak'tun and that one day after 13.0.0.0.0 the date will be notated as 0.0.0.0.1 and thus a new era is created. Other sources like Thompson (1950) don't mention the creation of a new area and continue counting as 13.0.0.0.1. Apparently this is a debatable issue, because various researchers (Thompson (1960), Grofe (2007) and Martin (2012)) appoint counting units of higher order than B'ak'tun, mentioned in figure 4.
 
