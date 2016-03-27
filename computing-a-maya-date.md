@@ -25,6 +25,9 @@ The ISO 8601 norm, which applies to representations and formats of dates in the 
 
 So when the first steps were made to realign the Julian calendar to the solar year (in 46 BC, by making the year 445 days long) the Julian calendar became discontinuous, hence the Proleptic Gregorian calendar is used for dates before October 15, 1582 and the Gregorian calendar for dates after.
 
+##The Maya calendar
+Simultaneously with these earlier global attempts to organise time, the ancient Maya in the dense jungles of Central America developed a complete script and were the inventors of the Mesoamerican calendar somewhere in the early parts of the last century of the Pre-Classic period (1800 BC - AD 250). The Maya calendar actually is a conjunction of other calendrical systems and is still in use in the Guatemalan highlands and some parts of South-East Mexico. The calendar consists of several cycles (consecutive day counts) of different lengths. The **Calendar Round** is composed of the 260-day  **Tzolk'in** and the 365-day counting **Haab'** calendar and spans a period of 52 years. To measure greater periods of time, the **Long Count** is initiated as a combination of the 144.000-day B'ak'tun, 7200-day K'atun, 360-day Tun, 20-day Winal and 1-day Kin cycles.
+
 ###Tzolk'in
 The perpetuate Tzolk'in calendar combines twenty day names with thirteen day numbers to produce 260 unique days. It is used to determine the time of religious and ceremonial events and for divination. The 260-day cycle was the most important measure of time among all Mesoamerican civilizations, for not only did it guide the daily rituals of the people but it also formed the basis for other measures of time of great astronomical and religious significance. For example, a double Tzolk'in (520 days) equates almost exactly with three eclipse half- years (519.93 days) and therefore provided a means for predicting solar eclipses (Malmström, 1973).
 
