@@ -111,7 +111,14 @@ Harris & Stearns (2010) state that there are only 13 cycles for the B'ak'tun and
 *Figure 4: Table of the Long Count units*
 
 ##Notation
-The Initial Series (IS) is a standard calendrical notation, which on an archetypal Maya monument comprises the opening segment of a text. This section is introduced by the Initial Series Introductory Glyph (ISIG), followed by the Long Count (LC), the Calendar Round (CR) and the according Lord of the Night glyph (Kettunen & Helmke, 2010).
+Maya date notation come in various forms, but are mostly carved in a two-column grid layout divided over the 5 row spanning Initial Series and a variable row spanning Supplementary Series. Each grid column contains a designated glyph that represent either a date of a cycle mentioned above, a deity or astronomical information. Date notation in the Initial series consist of a combination between a numeral representation with a glyph for the position in the date cycle. Mesoamerican numerals are written out as a dot for 1, a bar for 5 and a shell glyph to represent the zero concept, see figure 5.
+
+![Mesoamerican numerals](Glyphs/Numerals/mesoamerican-numerals.svg =490x352)
+
+*Figure 5: Mesoamerican numerals*
+
+
+The Initial Series is a standard calendrical notation, which on an archetypal Maya monument comprises the opening segment of a text. This section is introduced by the Initial Series Introductory Glyph, followed by the Long Count, the Calendar Round and the according Lord of the Night glyph (Kettunen & Helmke, 2010).
 
 ###Initial- and Supplementary series
 According to Coe (2012) most Classic inscriptions begin with the Initial Series, composed of a Long Count date and a day and month notation in the Calendar Round. Between the day and the month inscription usually a group of other glyphs occur that form the Supplementary Series (SS) and present lunar data for the particular day of the Initial Series: the number of days since the last New Moon, the position of that particular lunation in a cycle of six months and whether the lunar month contained 29 or 30 days. Findings in Copán showed that astronomers calculated a formula that held 149 moons to be equal with 4.400 days (which corresponds with 29.53020 days in our terms, only 33 seconds of its own value). 
