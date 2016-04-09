@@ -36,11 +36,11 @@ Each successive day of the Tzolk'in calendar is numbered from 1 to 13 after whic
 ####Table of the Tzolk'in count
 | Num | Name | Glyph | | Num | Name | Glyph | | Num | Name | Glyph | | Num | Name | Glyph |
 |-----|------|-------|-|-----|------|-------|-|-----|------|-------|-|-----|------|-------|
-| 1 | Imix' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D01-Imix.png =50x47) | | 6 | Kimi | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D06-Kimi.png =50x47) | | 11 | Chuwen | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D11-Chuwen.png =50x47) | | 16 | K'ib' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D16-Kib.png =50x47) |
-| 2 | Ik' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D02-Ik.png =50x47) | | 7 | Manik' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D07-Manik.png =50x47) | | 12 | Eb' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D12-Eb.png =50x47) | | 17 | Kab'an | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D17-Kaban.png =50x47) |
-| 3 | Ak'b'al | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D03-Akbal.png =50x47) | | 8 | Lamat | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D08-Lamat.png =50x47) | | 13 | B'en | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D13-Ben.png =50x47) | | 18 | Etz'nab' | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D18-Etznab.png =50x47) |
-| 4 | K'an | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D04-Kan.png =50x47) | | 9 | *uluk | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D09-Muluk.png =50x47) | | 14 | Ix | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D14-Ix.png =50x47) | | 19 | Kawak | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D19-Kawak.png =50x47) |
-| 5 | Chikchan | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D05-Chikchan.png =50x47) | | 10 | Ok | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D10-Ok.png =50x47) | | 15 | Men | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D15-Men.png =50x47) | | 20 | Ajaw | ![Imix glyph](Glyphs/Tzolkin/100px-MAYA-g-log-cal-D20-Ajaw.png =50x47) |
+| 1 | Imix' | ![Imix glyph](Glyphs/Tzolkin/imix.svg =50x47) | | 6 | Kimi | ![Imix glyph](Glyphs/Tzolkin/kimi.svg =50x47) | | 11 | Chuwen | ![Imix glyph](Glyphs/Tzolkin/chuwen.svg =50x47) | | 16 | K'ib' | ![Imix glyph](Glyphs/Tzolkin/kib.svg =50x47) |
+| 2 | Ik' | ![Imix glyph](Glyphs/Tzolkin/ik.svg =50x47) | | 7 | Manik' | ![Imix glyph](Glyphs/Tzolkin/manik.svg =50x47) | | 12 | Eb' | ![Imix glyph](Glyphs/Tzolkin/eb.svg =50x47) | | 17 | Kab'an | ![Imix glyph](Glyphs/Tzolkin/kaban.svg =50x47) |
+| 3 | Ak'b'al | ![Imix glyph](Glyphs/Tzolkin/akbal.svg =50x47) | | 8 | Lamat | ![Imix glyph](Glyphs/Tzolkin/lamat.svg =50x47) | | 13 | B'en | ![Imix glyph](Glyphs/Tzolkin/ben.svg =50x47) | | 18 | Etz'nab' | ![Imix glyph](Glyphs/Tzolkin/etznab.svg =50x47) |
+| 4 | K'an | ![Imix glyph](Glyphs/Tzolkin/kan.svg =50x47) | | 9 | Muluk | ![Imix glyph](Glyphs/Tzolkin/muluk.svg =50x47) | | 14 | Ix | ![Imix glyph](Glyphs/Tzolkin/ix.svg =50x47) | | 19 | Kawak | ![Imix glyph](Glyphs/Tzolkin/kawak.svg =50x47) |
+| 5 | Chikchan | ![Imix glyph](Glyphs/Tzolkin/chikchan.svg =50x47) | | 10 | Ok | ![Imix glyph](Glyphs/Tzolkin/ok.svg =50x47) | | 15 | Men | ![Imix glyph](Glyphs/Tzolkin/men.svg =50x47) | | 20 | Ajaw | ![Imix glyph](Glyphs/Tzolkin/ajaw.svg =50x47) | 
 
 *Figure 1: Table of the Tzolk'in count*
 
