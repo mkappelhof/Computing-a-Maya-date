@@ -259,34 +259,19 @@ The mathematics of Glyph G are straightforward and based on the last two digits 
 
 ##References
 
-Barnhart, E. (n.d.). *The Correlation Debate*. Retrieved from http://mayan-calendar.com/ancient_correlation.html
-
-Coe, M. D. (2012) *Breaking the Maya code*. London: Thames & Hudson
-
-Coe, M. D. (2011) *The Maya (Eight Edition)*. London: Thames & Hudson
-
-Buffett-Smith, P. (1989) *Practical Astronomy with your Calculator*. Cambridge: Cambridge University Press
-
-Grove M. J. (2007). *The Serpent Series: Precession in the Maya Dresden Codex* (Unpublished doctoral dissertation). University of California, Oakland.
-
-Harris, J. S., Stearns, S. K. (2010) *Understanding Maya Inscriptions - A Hieroglyph Handbook*. Philadelphia: The University of Pennsylvania Museum of Archaeology and Anthropology
-
-ISO, (2004). *ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Representation of dates and times*. Geneva, Switzerland: ISO. 
-
-Jefferys, B. (1998) *Julian day numbers*. Retrieved from: http://quasar.as.utexas.edu/BillInfo/JulianDatesG.html
-
-Johnson, S.A.J. (2014) *Translating Maya Hieroglyphs* Norman: University of Oklahoma Press
-
-Kettunen, H., Helmke, C. (2010). *Introduction to Maya Hieroglyphs*. The European Association of Mayanists, Wayeb
-
-Malmström, V. H. (1973). *Origin of the Mesoamerican 260-Day Calendar*. Science 181 (4103): 939–941.
-
-Martin, S. (2012). *Time, Kingship and the Maya Universe*. Expedition, 54(1), 18-25. http://www.penn.museum/documents/publications/expedition/PDFs/54-1/time-kingship-and-the-maya-universe.pdf 
-
-Thompson, J. Eric S. (1950) *Maya Hyroglyphic Writing: An Introduction*. Washington DC: Garnegie Institution of Washington
-
-Scott Birney, D., González, G. (2006) *Observational Astronomy*. Cambridge: Cambridge University Press
-
-Sharer, R., Morley, J. (1994) *The Ancient Maya, Second edition* Stanford: Stanford University Press
-
-Steel, D. (2001) *Marking Time: The Epic Quest to Invent the Perfect Calendar*. Hoboken: John Wiley & Sons
+1. Barnhart, E. (n.d.). *The Correlation Debate*. Retrieved from http://mayan-calendar.com/ancient_correlation.html
+2. Coe, M. D. (2012) *Breaking the Maya code*. London: Thames & Hudson
+3. Coe, M. D. (2011) *The Maya (Eight Edition)*. London: Thames & Hudson
+4. Buffett-Smith, P. (1989) *Practical Astronomy with your Calculator*. Cambridge: Cambridge University Press
+5. Grove M. J. (2007). *The Serpent Series: Precession in the Maya Dresden Codex* (Unpublished doctoral dissertation). University of California, Oakland.
+6. Harris, J. S., Stearns, S. K. (2010) *Understanding Maya Inscriptions - A Hieroglyph Handbook*. Philadelphia: The University of Pennsylvania Museum of Archaeology and Anthropology
+7. ISO, (2004). *ISO 8601:2004 Data elements and interchange formats -- Information interchange -- Repre* sentation of dates and times*. Geneva, Switzerland: ISO. 
+8. Jefferys, B. (1998) *Julian day numbers*. Retrieved from: http://quasar.as.utexas.edu/BillInfo/JulianDatesG.html
+9. Johnson, S.A.J. (2014) *Translating Maya Hieroglyphs* Norman: University of Oklahoma Press
+10. Kettunen, H., Helmke, C. (2010). *Introduction to Maya Hieroglyphs*. The European Association of Mayanists, Wayeb
+11. Malmström, V. H. (1973). *Origin of the Mesoamerican 260-Day Calendar*. Science 181 (4103): 939–941.
+12. Martin, S. (2012). *Time, Kingship and the Maya Universe*. Expedition, 54(1), 18-25. http://www.penn.museum/documents/publications/expedition/PDFs/54-1/time-kingship-and-the-maya-universe.pdf 
+13. Thompson, J. Eric S. (1950) *Maya Hyroglyphic Writing: An Introduction*. Washington DC: Garnegie Institution of Washington
+14. Scott Birney, D., González, G. (2006) *Observational Astronomy*. Cambridge: Cambridge University Press
+15. Sharer, R., Morley, J. (1994) *The Ancient Maya, Second edition* Stanford: Stanford University Press
+16. Steel, D. (2001) *Marking Time: The Epic Quest to Invent the Perfect Calendar*. Hoboken: John Wiley & Sons
