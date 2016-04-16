@@ -248,9 +248,9 @@ To calculate the Julian date, the number of elapsed days since the beginning of 
 
 ![Leap days](Equations/leap-days.svg)
 
-Note that, according to Duffett-Smith (1989), on many computers and calculators `int` refers to the least-integer function and render -4 for `int(-3.842)` while the value should be -3. To overcome this inconvenience the integer part of the positive equivalent should be computed and placed after a negative sign in the formula.
+Note that, according to Duffett-Smith (1989), on many computers and calculators `int` refers to the least-integer function and render −4 for `int(−3.842)` while the value should be −3. To overcome this inconvenience the integer part of the positive equivalent should be computed and placed after a negative sign in the formula.
 
-With these variables in place the Julian day number at 0:00 UT time for a given date can be calculated with the formula `JDN = 2.451.544,5 + 365 * (Y - 2000) + N - Ld`. To precisely calculate the day, the decimal fraction of the day at the given Universal time should be added (Scott Birney & González, 2006).
+With these variables in place the Julian day number at 0:00 UT time for a given date can be calculated with the formula `JDN = 2.451.544,5 + 365 * (Y − 2000) + N − Ld`. To precisely calculate the day, the decimal fraction of the day at the given Universal time should be added (Scott Birney & González, 2006).
 
 Finally subtract the correlation coefficient from the calculated Julian day number to yield the Maya day number. Divide out the Maya date number against the Long Count units in figure 3 to generate the Long Count value of a given date on the Gregorian calendar.
 
