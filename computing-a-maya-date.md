@@ -147,10 +147,10 @@ Although not all Supplementary Series glyphs are understood well enough and requ
 	A glyph   : month has 29/30 days*Figure 5: Initial Series notation*
 
 ####Initial Series Introductory Glyph
-The Initial Series Introductory Glyph is, most of the times, an oversized glyph spanning two glyph blocks in notation, see figure 5. Each ISIG has an unique, variable glyph within it that is framed by two comb-like elements. This glyph is indicated as the 'patron of the month' and can be used, in the absence of a Haab' glyph in the IS, used to determine the Haab' month by this patron (Harris & Stearns, 2010).
+The Initial Series Introductory Glyph is the first glyph in a Maya date notation and precedes the Initial series. The glyph occupies, mostly, two or more grid columns and contains a variable element that is framed by two comb-like elements. This centered glyph is referred to as the 'patron of the month' and is depending upon the Haab' date. If the Haab' is absent (or eroded) in the Initial Series, this glyph can be used to determine the Haab' date (Harris & Stearns, 2010).
 
 ####Lords of the night
-The nine lords of the underworld, in Maya religion, are a set of nine gods who each ruled over every ninth night forming a  never-ending perpetual calendrical cycle. The names of these gods are unknown, but the glyphs corresponding to these deities are well-known, and were worked out by Thompson (Thompson, 1929). In the absence of proper names, these lords of the underworld were assigned G designations. G Glyphs are usually the very first glyphs seen on monuments after the Haab', and form a continuous 9-day cycle (Coe, 2012).
+The nine lords of the night are a set of gods who each ruled over every ninth night forming a never-ending calendrical cycle, each with his or her own augury (good, bad or indifferent). The names of these gods are unknown, but the glyphs corresponding to these deities are well-known, and were worked out by Thompson (1929). In the absence of proper names, these lords of the underworld were assigned G designations. Because there is a correlation between dates and the Lords of the night, the date in the Initial Series can be verified by the glyph of the ruling lord (Coe, 2012).
 
 ##Calculation Methods
 A fundamental problems when working with offset dates on our calendrical system is the, so-called, correlation problem: computing an exact date that is defined in both the the Mayan and the Gregorian calendar, thus allowing the Western date to be aligned with its Mayan equivalent and vice versa. 
