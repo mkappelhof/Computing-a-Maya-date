@@ -153,7 +153,7 @@ The Initial Series Introductory Glyph is the first glyph in a Maya date notation
 The nine lords of the night are a set of gods who each ruled over every ninth night forming a never-ending calendrical cycle, each with his or her own augury (good, bad or indifferent). The names of these gods are unknown, but the glyphs corresponding to these deities are well-known, and were worked out by Thompson (1929). In the absence of proper names, these lords of the underworld were assigned G designations. Because there is a correlation between dates and the Lords of the night, the date in the Initial Series can be verified by the glyph of the ruling lord (Coe, 2012).
 
 ##Calculation Methods
-A fundamental problems when working with offset dates on our calendrical system is the, so-called, correlation problem: computing an exact date that is defined in both the the Mayan and the Gregorian calendar, thus allowing the Western date to be aligned with its Mayan equivalent and vice versa. 
+A fundamental problems when working with offset dates on our calendrical system is the, so-called, correlation problem: computing an exact date that is defined in both the Mayan and the Gregorian calendar, thus allowing the Western date to be aligned with its Mayan equivalent and vice versa. 
 
 ###Correlation problem
 At this moment there is no full-proof method to exactly align a date on the Western calendar with its Mayan equivalent. According toe Coe (2011) there are currently two methods which comply with most of the conditions to stand a change: the 11.16 (Goodman-Martinez-Thompson, GMT) and 12.9 (Spinden) correlation. To illustrate, the last one would make all the Mayan dates 260 years earlier than the former. 
@@ -163,11 +163,13 @@ Numerous scholars have suggested different correlation values, but according to 
 According to Harris & Stearns (2010) archeologists and epigraphers are about evenly split on using the GMT correlation constant of 584.283 and 584.285 days. According to Barnhart (n.d.) the GMT+2 correlation gained popularity amongst scholars "*because certain carved monuments with astronomical data (such as the solar eclipse recorded on a stela from Poco Uinic in Chiapas) correlate better with two days after the original GMT*". The modern Maya in Guatemala however follow the traditional GMT. Out of respect for the living tradition i tend to follow the original GMT correlation constant of 584.283 days.
 
 ###Compute a Calendar Round for a given Long Count
-According to Harris & Stearns (2010) the process of computing a Calendar Round for a given Long Count involves determining the amount of days that elapsed between a certain base date and the given Long Count. A complete date consists of four components: 1) Tzolk'in day name, 2) Tzolk'in day number, 3) Haab' month name and 4) Haab' month number that need to be derived from the given Long Count. 
+According to Harris & Stearns (2010) the process of computing a Calendar Round for a given Long Count involves determining the amount of days that elapsed between a certain base date and the given Long Count. A complete date consists of four components: 1) Tzolk'in day name, 2) Tzolk'in day number, 3) Haab' month name and 4) Haab' month number that all need to be derived from the given Long Count. 
 
+####Tzolk'in day name
 The first thing that can easily be found is the day name. Because there are twenty day names and twenty coefficients for the K'in position, a K'in coefficient always matches a specific day name as mentioned in figure 1. 
 
-The next thing to be found is the day number that matches the day name to complete the Tzolk'in. Figure 6 shows Calendar Round dates for several B'ak'tun completions (Harris & Stearns, 2010).
+####Tzolk'in day number
+The next thing to be found is the day number that matches the day name to fetch a precise date on the Tzolk'in calendar. Figure 6 shows Calendar Round dates for several B'ak'tun completions that can be used to derive the day number from (Harris & Stearns, 2010).
 
 | Base date | Calendar Round |
 |-----------|----------------|
@@ -181,15 +183,20 @@ The next thing to be found is the day number that matches the day name to comple
 
 *Figure 6: Base dates with Calendar Round coefficients*
 
-The value of the previous base date for the given Long Count in figure 6 must be subtracted from the Long Count to find the differences (`D`) in the Long Count positions. These differences result in a starting point to exactly calculate the elapsed days in the cycle. The result for each Long Count coefficient must be multiplied by the matching days from figure 4 and then divided by 13 (Tzolk'in day numbers, `Rt`) and 365 (a full Haab' completion, `Rh`) to determine the resulting remainders of the two sets by the modulo operator.
+The value of the *previous* base date for the given Long Count in figure 6 must be subtracted from the  given Long Count to find the differences (`D`, elapsed days) per Ka'tun, Tun, Winal and K'in cycle. This results in the total amount of days that need to be added to the Calendar Round base date to find the day number. To do so, the result for each Long Count coefficient must be multiplied by the amount of days in the cycle and then divided by 13 to compute the amount of elapsed days per Long Count coefficient. Since the result of each Long Count coefficient is a multiple of a full completion, the sum of the remainders (`Rt`) of all the results are the total amount of days that need to be added to the Calendar Round base date to find the day number and can be calculated with the following formula. 
 
 ![Tzolk'in remainders](Equations/tzolkin-remainders.svg)
 
+Since this outcome can be a multiple of the amount of day numbers (13), either the result of another remainder operation or the default value is the number that accompanies the day name and forms the Tzolk'in date.
+
+####Haab' month name & number
+Computing a full Haab' date is essentially the same, only the Haab' is a single, consecutive 365 day cycle. Again, the results for each Long Count coefficient must be multiplied by the amount of days in the cycle and then divided by 365 to compute the amount of elapsed days per Long Count coefficient. Since the result of each Long Count coefficient is a multiple of a full completion, the sum of the remainders (`Rh`) of all the results are the total amount of days in the cycle and can be calculated with the same formula.
+
 ![Haab remainders](Equations/haab-remainders.svg)
 
-From the Calendar Round of the base date in figure 6, the full Tzolk'in notation can be completed by adding the value of the `Rt` variable to the Tzolk'in base date value. This value is the amount of elapsed days in the Tzolk'in cycle. If this value is above 13, it must be divided by 13 so the remainder of this calculation will be the Tzolk'in day number.
+Second, determine where the Haab' base date falls in the cycle by multiplying the numerical equivalent of the month name by 20. Add the amount of the base date days to this number to find the total amount of days in the Haab' cycle. 
 
-The Haab' can be computed by finding the base date in the Haab' cycle in figure 2 and multiply the numerical equivalent from that column by 20. Add the numeric Haab' equivalent from the base date to this number to find the total amount of days in the cycle. From the `Rh` variable it is known that the Haab' cycle has increased with another `n` amount of days so adding these values result in the total days that have passed. As with the Tzolk'in, if this value transcends the 365-day cycle the result must be divided by 365 so the remainder of this calculation can be used to find the Haab' date in figure 2 (Harris & Stearns, 2010).
+As with the Tzolk'in the result can transcends the day boundary of 365 in the cycle so either the result of another remainder operation or the default value is the number that can be used to find the Haab' position in Figure 2. Again, find the largest multiple of 20 *smaller* than the result for the numerical equivalent of the month names. This result in the Haab' month name. The remainders are the month numbers.
 
 ###Compute a set of Long Counts for a given Calendar Round
 Harris & Stearns (2010) created a Tun Ending table that can be used to compute a set of Long Counts for a given Calendar Round. The Tun Ending table, Appendix H in the book, is comprised of 13 columns with entry pairs in each cell and one additional column to the right (as illustrated in figure 7) that determine the day number on which the Tun ends. As mentioned in figure 3, there is a relation between the day name and month number in a Calendar Round cycle. This can be inferred from the rightmost column where the day number is not contained. Possibilities for the day number can be found in the adjoining column pairs. The first column is a shorthand a full Long Count (8.1.15.0.0 in the case of figure 7) and the right entry indicates the day number of the Calendar Round for the Long Count (15 in the case of figure 7). On the next row, the left entry displays the next Tun completion after the one in the column above (8.1.16.0.0 in the case of figure 7).
