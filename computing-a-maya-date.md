@@ -286,3 +286,4 @@ The mathematics of Glyph G are straightforward and based on the last two digits 
 14. Scott Birney, D., González, G. (2006) *Observational Astronomy*. Cambridge: Cambridge University Press
 15. Sharer, R., Morley, J. (1994) *The Ancient Maya, Second edition* Stanford: Stanford University Press
 16. Steel, D. (2001) *Marking Time: The Epic Quest to Invent the Perfect Calendar*. Hoboken: John Wiley & Sons
+17. Tedlock, B. (1993) *Time and the Highland Maya*. Albuquerque: University of new Mexico Press
